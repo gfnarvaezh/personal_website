@@ -1,0 +1,91 @@
+@import url(http://fonts.googleapis.com/css?family=Rubik:500);
+
+body {
+    font-family: 'Rubik', sans-serif !important;
+  }
+
+.full-screen {
+    height: 110vh;
+    height: 100%;
+}
+
+.full-screen2 {
+    height: 110vh;
+}
+
+.vertical-center{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.vertical-center-relative{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+}
+
+.bottom-center{
+    position: absolute;
+    top: 90%;
+    width: 100%;
+}
+
+.background-dev{
+    background-image: url('img/dev.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.text-shadow-title{
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.text-shadow-body{
+    text-shadow: 1px 1px 3px #000000;
+}
+
+a:link {
+    color:white;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: inherit;
+    text-decoration: underline;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:link {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
+.parent {
+    display: table;
+  }
+
+.outer {
+  display: table;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+}
