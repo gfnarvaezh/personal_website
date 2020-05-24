@@ -52,6 +52,7 @@ body {
 a:link {
     color:white;
     text-decoration: underline;
+
 }
 
 a:visited {
@@ -61,10 +62,8 @@ a:visited {
     text-decoration: none;
 }
 
-a:link {
-    color: inherit;
-    background-color: transparent;
-    text-decoration: none;
+a:hover{
+    font-weight: bold;
 }
 
 
@@ -88,4 +87,38 @@ a:link {
 .inner {
   margin-left: auto;
   margin-right: auto;
+}
+
+.social-nets{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.navbar-toggler{
+    transition: 0.5s;
+    border-color: white;
+}
+
+.navbar-toggler:hover{
+    border: 2px solid;
+    border-radius: 2rem;
+}
+
+.navbar-toggler:visited{
+    border-color: white;
+}
+
+.portfolio-box{
+    border-style: solid;
+    border-radius: 10px;
+    border-color: black;
+    height: 100%;
+}
+
+#contact{
+    width: 90%
+}
+
+#portfolio{
+    width: 90%;
 }
