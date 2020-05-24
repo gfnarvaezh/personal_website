@@ -1,0 +1,37 @@
+body {
+	background-color: #fff;
+}
+
+a:link {
+    color:rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+#canvas{
+    border: 1px solid;
+    border-color:black;
+    background-color: palegoldenrod;
+    width: 280px;
+    height: 280px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.bar{
+    transition: width 0.5s;
+    text-shadow: 1px 1px 3px #ffffff;
+}
+
+.bar-number{
+    width: 10%;
+}
+
+#mnist_container{
+    margin: 10%;
+}
+
+.numbers_container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Felipe Narvaez</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="style_blog1.css">
+
+    <link rel="icon" href="/img/logo.svg">
+
+</head>
+
+<body class="full-screen jumbotron-fluid bg-ligt">
+    <!--Header-->
+    <header id = 'header'></header>
+    <!-- First page of the website-->
+    <!-- Title-->
+
+    <div class="jumbotron bg-white">
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <h1 class="text-center ">Deployment of a Mnist classificator</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron bg-ligt">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <p>Use the yellow box to write a digit between 0 and 9. You will get back a graph showing which numbers are more similar to the written one.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Canvas and results-->
+    <div>
+        <div id='mnist_container' class="text-center">
+            <div class="row">
+                <div id="canvas_container" class="col-md-6 text-center">
+                    <canvas id = 'canvas' width="28" height="28">
+                        <script src="canvas.js"></script>
+                    </canvas>
+                </div>
+                <div class="col-md-6">
+                    <div style="width: 100%;">
+                            <div class="numbers_container">
+                                <div class="bar-number">0</div>    
+                                <div class="bar bg-info"id='bar0'></div>
+                            </div>
+                            <div class="numbers_container">
+                                <div class="bar-number">1</div>
+                                <div class="bar bg-info"id='bar1'></div>
+                            </div>
+                            <div class="numbers_container">
+                                <div class="bar-number">2</div>
+                                <div class="bar bg-info"id='bar2'></div>
+                            </div>
+                            <div class="numbers_container">
+                                <div class="bar-number">3</div>
+                                <div class="bar bg-info"id='bar3'></div>
+                            </div>
+                            <div class="numbers_container">
+                                <div class="bar-number">4</div>
+                                <div class="bar bg-info"id='bar4'></div>
+                            </div>
+                            <div class="numbers_container">
+                                <div class="bar-number">5</div>
+                                <div class="bar bg-info"id='bar5'></div>
+                            </div>
+                            <div class="numbers_container">
+                                <div class="bar-number">6</div>
+                                <div class="bar bg-info"id='bar6'></div>
+                            </div>
+                            <div class="numbers_container">
+                                <div class="bar-number">7</div>
+                                <div class="bar bg-info"id='bar7'></div>
+                            </div>
+                            <div class="numbers_container">
+                                <div class="bar-number">8</div>
+                                <div class="bar bg-info"id='bar8'></div>
+                            </div>
+                            <div class="numbers_container">
+                                <div class="bar-number">9</div>
+                                <div class="bar bg-info"id='bar9'></div>
+                            </div>
+                    </div>       
+                </div>
+            </div>
+            <div class="text-center my-4">
+                <input type="button" id="clear" value="Clear image content">
+            </div>
+        </div>
+
+    </div>
+
+    <!--Aditional content-->
+    <div class="jumbotron bg-ligt">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <p>This deployment uses a simple densely connected neural network to make predictions. The backend was implemented using a Lambda function connected to the front-end using the AWS Gateway API service. The model is stored in a private S3 bucket.</p>
+                <p>Within the Lambda function, a Python script is used to call Tensorflow lite, load the model and make the prediction, returning a list with 10 elements. A layer containing Tensorflow lite was created using Docker and the AWS Linux image. The code within the Lambda function, as well as the front-end can be found in my <a href="https://github.com/gfnarvaezh">Github</a>. The front-end is in the 'personal_website' repository, the backend is in the 'mnist' repository.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <footer id="footer"></footer>
+</div>
+</body>
+</html>
