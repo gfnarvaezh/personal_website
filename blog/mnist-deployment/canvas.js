@@ -79,6 +79,11 @@ window.addEventListener('load', () => {
 
         var data = {
             image: image,
+            headers: {
+                "Access-Control-Allow-Origin": "http://narvaezfelipe.com",
+                "Access-Control-Allow-Headers": "Content-Type",
+                "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+              },
             image_name : "test"
           }
         
